@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main1 {
+public class Decryption {
 
     static Scanner scanner = new Scanner(System.in);
     static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

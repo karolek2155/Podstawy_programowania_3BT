@@ -14,37 +14,41 @@ public class Main {
         System.out.println("Podaj klucz szyfrowy:");
         int key = getKey();
         String changedAlphabet = createChangedAlphabet(alphabet, key);
-        System.out.println(changedAlphabet);
+        System.out.println("Zmieniony alfabet: " + changedAlphabet);
 
         String decryptedText = decryptText(phrase, alphabet, changedAlphabet);
         System.out.println("Odkodowany tekst to:\n" + decryptedText);
 
     }
 
-
     public static String getPhrase() {
-        return scanner.nextLine();
+        return scanner.nextLine().toUpperCase();
     }
 
     public static int getKey() {
+        while (!scanner.hasNextInt()) {
+            System.out.println("Podaj poprawny numer.");
+            scanner.next();
+        }
         return scanner.nextInt();
     }
 
     public static String createChangedAlphabet(String alphabet, int key) {
-        String changedAlphabet = "";
+        StringBuilder changedAlphabet = new StringBuilder();
         for (int i = 0; i < alphabet.length(); i++) {
-            changedAlphabet = changedAlphabet.concat(String.valueOf(alphabet.charAt((i + key) % alphabet.length())));
+            changedAlphabet.append(alphabet.charAt((i + key) % alphabet.length()));
         }
-        return changedAlphabet;
+        return changedAlphabet.toString();
     }
 
-    public static String decryptText(String phrase, String changedAlphabet, String alphabet) {
-        String decryptedText = "";
+    public static String decryptText(String phrase, String alphabet, String changedAlphabet) {
+        StringBuilder decryptedText = new StringBuilder();
         for (int i = 0; i < phrase.length(); i++) {
             int placeChar = changedAlphabet.indexOf(phrase.charAt(i));
-            decryptedText = decryptedText.concat(String.valueOf(alphabet.charAt(placeChar)));
+            if (placeChar != -1) {
+                decryptedText.append(alphabet.charAt(placeChar));
+            }
         }
-        return decryptedText;
-
+        return decryptedText.toString();
     }
 }

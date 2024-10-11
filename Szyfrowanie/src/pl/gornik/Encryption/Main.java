@@ -2,7 +2,7 @@ package pl.gornik.Encryption;
 
 import java.util.Scanner;
 
-public class Main1 {
+public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class Main1 {
         String phrase = getReducedPhrase(alphabet);
         System.out.println(phrase);
         System.out.println("Podaj klucz szyfrowy:");
-        String key = getKey();
+        int key = getKey();
         String changedAlphabet = createChangedAlphabet(alphabet, key);
         System.out.println(changedAlphabet);
 
@@ -31,17 +31,18 @@ public class Main1 {
         return reducedPhrase;
     }
 
-    public static String getKey() {
-        return scanner.nextLine().toUpperCase();
+    public static int getKey() {
+        while (!scanner.hasNextInt()) {
+            System.out.println("Podaj poprawny numer.");
+            scanner.next();
+        }
+        return scanner.nextInt();
     }
 
-    public static String createChangedAlphabet(String alphabet, String key) {
+    public static String createChangedAlphabet(String alphabet, int key) {
         String changedAlphabet = "";
-        changedAlphabet = changedAlphabet.concat(key);
         for (int i = 0; i < alphabet.length(); i++) {
-            if (!key.contains(String.valueOf(alphabet.charAt(i))))
-                changedAlphabet = changedAlphabet.concat(String.valueOf(alphabet.charAt(i % alphabet.length())));
-
+            changedAlphabet = changedAlphabet.concat(String.valueOf(alphabet.charAt((i + key) % alphabet.length())));
         }
         return changedAlphabet;
     }

@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String alphabet = "ABCDEFGHIJKLMNPQRSTUVWXYZ";
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         System.out.println("Podaj tekst do zaszyfrowania:");
         String phrase = getReducedPhrase(alphabet);
         System.out.println(phrase);
@@ -18,37 +18,40 @@ public class Main {
 
         String encryptedText = encryptText(phrase, alphabet, changedAlphabet);
         System.out.println("Zakodowany tekst to:\n" + encryptedText);
-
     }
 
     public static String getReducedPhrase(String alphabet) {
         String phrase = scanner.nextLine().toUpperCase();
-        String reducedPhrase = "";
+        StringBuilder reducedPhrase = new StringBuilder();
         for (int i = 0; i < phrase.length(); i++) {
             if (alphabet.contains(String.valueOf(phrase.charAt(i))))
-                reducedPhrase = reducedPhrase.concat(String.valueOf(phrase.charAt(i)));
+                reducedPhrase.append(phrase.charAt(i));
         }
-        return reducedPhrase;
+        return reducedPhrase.toString();
     }
 
     public static int getKey() {
+        while (!scanner.hasNextInt()) {
+            System.out.println("Podaj poprawny numer.");
+            scanner.next();
+        }
         return scanner.nextInt();
     }
 
     public static String createChangedAlphabet(String alphabet, int key) {
-        String changedAlphabet = "";
+        StringBuilder changedAlphabet = new StringBuilder();
         for (int i = 0; i < alphabet.length(); i++) {
-            changedAlphabet = changedAlphabet.concat(String.valueOf(alphabet.charAt((i + key) % alphabet.length())));
+            changedAlphabet.append(alphabet.charAt((i + key) % alphabet.length()));
         }
-        return changedAlphabet;
+        return changedAlphabet.toString();
     }
 
     public static String encryptText(String phrase, String alphabet, String changedAlphabet) {
-        String encryptedText = "";
+        StringBuilder encryptedText = new StringBuilder();
         for (int i = 0; i < phrase.length(); i++) {
             int placeChar = alphabet.indexOf(phrase.charAt(i));
-            encryptedText = encryptedText.concat(String.valueOf(changedAlphabet.charAt(placeChar)));
+            encryptedText.append(changedAlphabet.charAt(placeChar));
         }
-        return encryptedText;
+        return encryptedText.toString();
     }
 }
