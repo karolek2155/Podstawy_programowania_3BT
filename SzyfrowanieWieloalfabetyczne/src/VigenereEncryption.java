@@ -1,21 +1,21 @@
 import java.util.Scanner;
 
-public class Decryption {
+public class VigenereEncryption {
 
     static Scanner scanner = new Scanner(System.in);
     static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public static void main(String[] args) {
 
-        System.out.println("Podaj tekst do odszyfrowania: ");
+        System.out.println("Podaj tekst do zaszyfrowania: ");
         String phrase = getReducedPhrase();
 
         System.out.println("Podaj klucz: ");
         String keyword = getReducedKeyword();
 
-        System.out.println("Odszyfrowany tekst: ");
-        String decryptedPhrase = decryptPhrase(phrase, keyword);
-        System.out.println(decryptedPhrase);
+        System.out.println("Zaszyfrowany tekst: ");
+        String encryptedPhrase = encryptPhrase(phrase, keyword);
+        System.out.println(encryptedPhrase);
     }
 
     public static String getReducedPhrase(){
@@ -41,18 +41,18 @@ public class Decryption {
         return reducedKeyword;
     }
 
-    public static String decryptPhrase(String phrase, String key){
+    public static String encryptPhrase(String phrase, String key){
         int alfLen = alphabet.length();
         int phraseLen = phrase.length();
         int keyLen = key.length();
-        String decryptedPhrase = "";
+        String encryptedPhrase = "";
         int nrKey = 0;
-        char decryptChar;
-        for(int i = 0; i < phraseLen; i++){
+        char encryptChar;
+        for(int i = 0; i<phraseLen; i++){
             nrKey = alphabet.indexOf(key.charAt(i % keyLen));
-            decryptChar = alphabet.charAt((alphabet.indexOf(phrase.charAt(i)) - nrKey + alfLen) % alfLen);
-            decryptedPhrase = decryptedPhrase.concat(String.valueOf(decryptChar));
+            encryptChar = alphabet.charAt((alphabet.indexOf(phrase.charAt(i)) + nrKey) % alfLen);
+            encryptedPhrase = encryptedPhrase.concat(String.valueOf(encryptChar));
         }
-        return decryptedPhrase;
+        return encryptedPhrase;
     }
 }

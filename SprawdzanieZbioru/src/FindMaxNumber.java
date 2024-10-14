@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class FindMaxNumber {
 
     public static int index;
 

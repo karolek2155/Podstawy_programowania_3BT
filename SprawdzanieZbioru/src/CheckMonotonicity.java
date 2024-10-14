@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class Main1 {
+public class CheckMonotonicity {
 
     public static int index;
 

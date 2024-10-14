@@ -1,9 +1,6 @@
 import java.util.Scanner;
 
-public class Main2 {
-
-    public static int increment;
-
+public class LinearSearchWithIndex {
 
     public static void main(String[] args) {
 
@@ -18,18 +15,20 @@ public class Main2 {
         }
         System.out.println("\nJaka jest szukana liczba?");
         int lockedForNumber = scanner.nextInt();
-        if (findNumber(numberArray, lockedForNumber))
-            System.out.printf("W tablicy znaleziono szukaną liczbę %d na pozycji %d\n", lockedForNumber, increment);
+        int index = findIndex(numberArray, lockedForNumber);
+        if (index >= 0)
+            System.out.printf("W tablicy znaleziono szukaną liczbę %d na pozycji %d\n", lockedForNumber, index);
         else System.out.printf("W tablicy nie znaleziono szukanej liczby %d\n", lockedForNumber);
 
 
     }
 
-    public static boolean findNumber(int[] numberArray, int number) {
+    public static int findIndex(int[] numberArray, int number) {
+        int increment = 0;
         int size = numberArray.length;
         while (increment < size && numberArray[increment] != number)
             increment++;
-        if (increment == size) return false;
-        return true;
+        if (increment == size) return -1;
+        return increment;
     }
 }

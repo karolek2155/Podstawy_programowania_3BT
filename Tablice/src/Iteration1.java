@@ -23,7 +23,7 @@ public class Iteration1 {
 
         System.out.println("\nSuma liczb z tej tablicy wynosi: " + sum);
         System.out.println("Srednia liczb z tej tablicy wynosi: " + (double) sum/ array.length);
-        System.out.println("najmniejsza wartosc tej tablicy wynosi " + min + " na pozycji " + index);
+        System.out.println("Najmniejsza wartosc tej tablicy wynosi " + min + " na pozycji " + index);
 
 
     }

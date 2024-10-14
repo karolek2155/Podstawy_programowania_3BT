@@ -2,13 +2,13 @@ package pl.gornik.Decryption;
 
 import java.util.Scanner;
 
-public class Main {
+public class CaesarCipher {
 
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
-        String alphabet = "ABCDEFGHIJKLMNPQRSTUVWXYZ";
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         System.out.println("Podaj tekst do odszyfrowania:");
         String phrase = getPhrase();
         System.out.println("Podaj klucz szyfrowy:");
