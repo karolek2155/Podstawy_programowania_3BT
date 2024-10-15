@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FilterNumbersGreaterThan50 {
+public class FilterNumbersBiggerThan50 {
 
     public static int counter;
 

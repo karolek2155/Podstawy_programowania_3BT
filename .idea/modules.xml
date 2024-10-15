@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Podstawy-programowania---3BT.iml" filepath="$PROJECT_DIR$/.idea/Podstawy-programowania---3BT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[1] DataAndTextProcessing/[1] DataAndTextProcessing.iml" filepath="$PROJECT_DIR$/[1] DataAndTextProcessing/[1] DataAndTextProcessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[2] MonoalphabeticEncryption/[2] MonoalphabeticEncryption.iml" filepath="$PROJECT_DIR$/[2] MonoalphabeticEncryption/[2] MonoalphabeticEncryption.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[3] PolyalphabeticEncryption/[3] PolyalphabeticEncryption.iml" filepath="$PROJECT_DIR$/[3] PolyalphabeticEncryption/[3] PolyalphabeticEncryption.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[4] LinearSearch/[4] LinearSearch.iml" filepath="$PROJECT_DIR$/[4] LinearSearch/[4] LinearSearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[5] SentrySearch/[5] SentrySearch.iml" filepath="$PROJECT_DIR$/[5] SentrySearch/[5] SentrySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/[6] NumberSetOperations/[6] NumberSetOperations.iml" filepath="$PROJECT_DIR$/[6] NumberSetOperations/[6] NumberSetOperations.iml" />
+    </modules>
+  </component>
+</project>
