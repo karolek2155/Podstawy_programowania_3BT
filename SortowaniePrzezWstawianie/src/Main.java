@@ -1,17 +1,14 @@
-package pl.gornik;
-
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Sortowanie 'Insertion Sort'");
-        System.out.println("Podaj liczbę elementow do posortowania");
+        System.out.println("Podaj liczbę elementów do posortowania");
         int size = scanner.nextInt();
         int[] numbers = new int[size];
 
-        System.out.println("Wylosować liczby (1), czy wypiszesz z klawiatury (2)");
+        System.out.println("Czy chcesz wylosować liczby (1), czy wypisać je z klawiatury (2)");
         int option = scanner.nextInt();
         while (!(option == 1 || option == 2)) {
             System.out.println("Podaj 1 lub 2");
@@ -29,7 +26,7 @@ public class Main {
             }
         }
 
-        System.out.println("Wylosowane liczby");
+        System.out.println("Nieposortowane liczby");
         for (int i = 0; i < size; i++) {
             System.out.printf("%3d", numbers[i]);
         }
@@ -42,18 +39,17 @@ public class Main {
     }
 
     public static void insertionSort(int[] numbers) {
-        int k;
+        int size = numbers.length;
         int temp;
-        int n = numbers.length;
-
-        for (int i = 0; i < n - 1; i++) {
-            k = i;
-            for (int j = i + 1; j < n; j++) {
-                if (numbers[j] < numbers[k]) k = j;
+        int k;
+        for (int i = 1; i < size; i++) {
+            temp = numbers[i];
+            k = i - 1;
+            while (k >= 0 && numbers[k] > temp) {
+                numbers[k + 1] = numbers[k];
+                k--;
             }
-            temp = numbers[k];
-            numbers[k] = numbers[i];
-            numbers[i] = temp;
+            numbers[k + 1] = temp;
         }
     }
 }
