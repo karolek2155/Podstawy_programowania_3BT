@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DataAndTextProcessing/DataAndTextProcessing.iml" filepath="$PROJECT_DIR$/DataAndTextProcessing/DataAndTextProcessing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MonoalphabeticEncryption/MonoalphabeticEncryption.iml" filepath="$PROJECT_DIR$/MonoalphabeticEncryption/MonoalphabeticEncryption.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Podstawy-programowania---3BT.iml" filepath="$PROJECT_DIR$/.idea/Podstawy-programowania---3BT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PolyalphabeticEncryption/PolyalphabeticEncryption.iml" filepath="$PROJECT_DIR$/PolyalphabeticEncryption/PolyalphabeticEncryption.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrzeszukiwanieLiniowe/PrzeszukiwanieLiniowe.iml" filepath="$PROJECT_DIR$/PrzeszukiwanieLiniowe/PrzeszukiwanieLiniowe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrzeszukiwanieZWartownikiem/PrzeszukiwanieZWartownikiem.iml" filepath="$PROJECT_DIR$/PrzeszukiwanieZWartownikiem/PrzeszukiwanieZWartownikiem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SprawdzanieZbioru/SprawdzanieZbioru.iml" filepath="$PROJECT_DIR$/SprawdzanieZbioru/SprawdzanieZbioru.iml" />
+    </modules>
+  </component>
+</project>
