@@ -1,10 +1,12 @@
+package pl.gornik.lesson;
+
 import java.util.Scanner;
 
-public class Main2 {
+public class Main1 {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Obliczanie pola pod wykresem funkcji\nMetoda trapezów");
+        System.out.println("Obliczanie pola pod wykresem funkcji\nMetoda prostokątów");
         System.out.println("Podaj początek, koniec przedziału");
         double start = scanner.nextDouble();
         double stop = scanner.nextDouble();
@@ -40,7 +42,7 @@ public class Main2 {
         double area = 0;
         double x;
         for (int i = 0; i < parts; i++) {
-            x = start + parts * i;
+            x = start + interval * i + interval / 2;
             area += calculateValueFunction(coefficients, x);
         }
         return area * interval;

@@ -1,3 +1,5 @@
+package pl.gornik.lesson;
+
 import java.util.Scanner;
 
 public class Main {
