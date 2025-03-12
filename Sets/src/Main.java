@@ -60,6 +60,12 @@ public class Main {
 
         System.out.println("------------------------");
         List<Character> letters = Arrays.asList('a', 'b', 'c', 'd', 'e', 'f', 'b', 'e', 'd');
+        Set<Character> lettersSet = new TreeSet<>(letters);
+        System.out.println("Lista: " + letters);
+        System.out.println("Set: " + lettersSet);
+        List<Character> letters2 = new ArrayList<>();
+        letters2.addAll(lettersSet);
+        System.out.println("Lista po usunięciu duplikatów: " + letters2);
 
     }
 }
