@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AllAlgorythmsSorting.iml" filepath="$PROJECT_DIR$/AllAlgorythmsSorting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lists.iml" filepath="$PROJECT_DIR$/Lists.iml" />
     </modules>
   </component>
 </project>
