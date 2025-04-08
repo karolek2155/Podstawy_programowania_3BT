@@ -23,9 +23,7 @@ public class Main {
 
         System.out.println("--------------------------------------");
         if (cities.containsKey(7)) {
-//            cities.put(7, "Tarnobrezg");
-            cities.get(7).replace(cities.get(7), "Tarnobrzeg");
-            System.out.println(7 + " - " + cities.get(7));
+            cities.put(7, "Tarnobrezg");
         }
     }
 }
